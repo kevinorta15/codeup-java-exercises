@@ -91,6 +91,10 @@ public class ControlFlowExercises {
 //                String message = "\n" + i + "       " + numberSquared + "       " + numberCubed;
 //
 //                System.out.println(message);
+//
+//                Scanner newScanner = new Scanner(System.in);
+//                System.out.println("Would you like to enter another number?");
+//                choice = newScanner.next();
 //            }
 //        }
 
@@ -106,18 +110,18 @@ public class ControlFlowExercises {
 
             if (urGrade > 88) {
                 System.out.println("You have an A! Great job!");
-            } else if (urGrade > 80) {
+            } else if (urGrade >= 80) {
                 System.out.println("You have a B! So close to that A...");
-            } else if (urGrade > 67) {
+            } else if (urGrade >= 67) {
                 System.out.println("You have a C! Still passing but we can work on it...");
-            } else if (urGrade > 60) {
+            } else if (urGrade >= 60) {
                 System.out.println("You have a D! It's like failing but not...");
             } else {
                 System.out.println("Looks like an F to me... for FAILURE. Let's bring that up kid!");
             }
             Scanner againLoop = new Scanner(System.in);
             System.out.println("Would you like to enter another grade? [y/n]");
-            String newchoice = promptGrade.next();
+            choice = againLoop.next();
         }
     }
 }
