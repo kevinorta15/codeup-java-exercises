@@ -9,14 +9,15 @@ public class StringsHandout {
         //This leads us to use object comparison methods (.equals and family) to reliably check the VALUES of the objects vs. the REFERENCES of the objects
 
         //Don't do this! ! ! This is behavior from a woods-y topic related to how the Java Virtual Machine works
-        if("This is a string" == "This is a string"){
-            System.out.println("Performing some kind of super important operation with the above!! (Skynet launched!)");
-        }
+//        String thisisAString = "This is a string";
+//        if( thisisAString == "This is a string"){
+//            System.out.println("Performing some kind of super important operation with the above!! (Skynet launched!)");
+//        }
 
         //Utilize the methods introduced here instead for consistency and reliability:
-        if("This is a string".equals("This is a string")){
-            System.out.println("Everything is a-okay over here! We used .equals, so we're feeling confident in what's going on with our code.");
-        }
+//        if("This is a string".equals(thisisAString)){
+//            System.out.println("Everything is a-okay over here! We used .equals, so we're feeling confident in what's going on with our code.");
+//        }
 
         // ' ~ " * "string comparison methods" * " ~ '
 
@@ -24,25 +25,26 @@ public class StringsHandout {
 
         //.equals + .equalsIgnoreCase (casematch the total string or ignore the casing of the total string?)
         String txCapitalCity = "Austin";
-        String lowercaseTxCapitalCity = "austin";
-        System.out.println("txCapitalCity = " + txCapitalCity);
-        System.out.println("lowercaseTxCapitalCity = " + lowercaseTxCapitalCity);
-        System.out.println("lowercaseTxCapitalCity.equals(lowercaseTxCapitalCity) = " + lowercaseTxCapitalCity.equals(lowercaseTxCapitalCity));
-        System.out.println("txCapitalCity.equals(txCapitalCity) = " + txCapitalCity.equals(txCapitalCity));
-        System.out.println("txCapitalCity.equals(lowercaseTxCapitalCity) = " + txCapitalCity.equals(lowercaseTxCapitalCity));
-        System.out.println("txCapitalCity.equalsIgnoreCase(lowercaseTxCapitalCity) = " + txCapitalCity.equalsIgnoreCase(lowercaseTxCapitalCity));
+//        String lowercaseTxCapitalCity = "austin";
+//        System.out.println("txCapitalCity = " + txCapitalCity);
+//        System.out.println("lowercaseTxCapitalCity = " + lowercaseTxCapitalCity);
+//        System.out.println("lowercaseTxCapitalCity.equals(lowercaseTxCapitalCity) = " + lowercaseTxCapitalCity.equals(lowercaseTxCapitalCity));
+//        System.out.println("txCapitalCity.equals(txCapitalCity) = " + txCapitalCity.equals(txCapitalCity));
+//        System.out.println("txCapitalCity.equals(lowercaseTxCapitalCity) = " + txCapitalCity.equals(lowercaseTxCapitalCity));
+//        System.out.println("txCapitalCity.equalsIgnoreCase(lowercaseTxCapitalCity) = " + txCapitalCity.equalsIgnoreCase(lowercaseTxCapitalCity));
 
         //.startsWith + .endsWith
         String austinSentence = "The capital city of Texas is " + txCapitalCity + ", and it is growing quickly.";
-        System.out.println(austinSentence);
-        System.out.println("austinSentence.startsWith(\"The capital city\") = " + austinSentence.startsWith("The capital city"));
-        System.out.println("austinSentence.startsWith(\"the capital city\") = " + austinSentence.startsWith("the capital city"));
-        System.out.println("austinSentence.startsWith(\"The capitol city\") = " + austinSentence.startsWith("The capitol city"));
+//        System.out.println(austinSentence);
+//        System.out.println("austinSentence.startsWith(\"The capital city\") = " + austinSentence.startsWith("The capital city"));
+//        System.out.println("austinSentence.startsWith(\"the capital city\") = " + austinSentence.startsWith("the capital city"));
+//        System.out.println("austinSentence.startsWith(\"The capitol city\") = " + austinSentence.startsWith("The capitol city"));
+//
+////
+//        System.out.println("austinSentence.endsWith(\"it is growing quickly.\") = " + austinSentence.endsWith("it is growing quickly."));
+//        System.out.println("austinSentence.endsWith(\"it is growing QUICKLY.\") = " + austinSentence.endsWith("it is growing QUICKLY."));
+//        System.out.println("austinSentence.endsWith(\"it is growing quick.\") = " + austinSentence.endsWith("it is growing quick."));
 
-
-        System.out.println("austinSentence.endsWith(\"it is growing quickly.\") = " + austinSentence.endsWith("it is growing quickly."));
-        System.out.println("austinSentence.endsWith(\"it is growing QUICKLY.\") = " + austinSentence.endsWith("it is growing QUICKLY."));
-        System.out.println("austinSentence.endsWith(\"it is growing quick.\") = " + austinSentence.endsWith("it is growing quick."));
 
         //' ~ " * "string manipulation methods" * " ~ '
 
@@ -68,17 +70,17 @@ public class StringsHandout {
         System.out.println();
 
         //int length() - returns length of string
-        System.out.println("austinSentence = " + austinSentence);
-        System.out.println("austinSentence.length() = " + austinSentence.length());
-        System.out.println("txCapitalCity = " + txCapitalCity);
-        System.out.println("txCapitalCity.length() = " + txCapitalCity.length());
-        System.out.println();
+//        System.out.println("austinSentence = " + austinSentence);
+//        System.out.println("austinSentence.length() = " + austinSentence.length());
+//        System.out.println("txCapitalCity = " + txCapitalCity);
+//        System.out.println("txCapitalCity.length() = " + txCapitalCity.length());
+//        System.out.println();
 
         //String .replace(searchPattern, replacementString) - Returns a copy of the string with the matching pattern replaced by the second argument
-        String newcapitalSentence = austinSentence.replace("is Austin, and it is", "was five other cities before Austin, and the state is");
-        System.out.println("newcapitalSentence = " + newcapitalSentence);
+//        String newcapitalSentence = austinSentence.replace("is Austin, and it is", "was five other cities before Austin, and the state is");
+//        System.out.println("newcapitalSentence = " + newcapitalSentence);
 
-        //.toLowerCase() & toUpperCase()
+//        .toLowerCase() & toUpperCase()
         System.out.println("txCapitalCity = " + txCapitalCity);
         System.out.println("txCapitalCity.toLowerCase() = " + txCapitalCity.toLowerCase());
         System.out.println("txCapitalCity.toUpperCase() = " + txCapitalCity.toUpperCase());
