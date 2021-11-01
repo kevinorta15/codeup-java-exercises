@@ -16,6 +16,7 @@ public class MoviesApplication {
         System.out.println("3 - view movies in the drama category\n");
         System.out.println("4 - view movies in the horror category\n");
         System.out.println("5 - view movies in the scifi category\n");
+        System.out.println("6 - view movies in the comedy category");
 
         allMovies();
 
@@ -40,15 +41,48 @@ public class MoviesApplication {
                 break;
             case 2:
                 System.out.println("Animated... sweet! Coming right up!");
+                for (int i = 0; i < movies.length; i++) {
+                    if (movies[i].getCategory().equals("animated")) {
+                        System.out.println(movies[i].getName() + " -- " + movies[i].getCategory());
+                    }
+                }
+                allMovies();
                 break;
             case 3:
                 System.out.println("Drama, what a sad day!");
+                for (int i = 0; i < movies.length; i++) {
+                    if (movies[i].getCategory().equals("drama")) {
+                        System.out.println(movies[i].getName() + " -- " + movies[i].getCategory());
+                    }
+                }
+                allMovies();
                 break;
             case 4:
                 System.out.println("SPOOKY SEASON, Horror!");
+                for (int i = 0; i < movies.length; i++) {
+                    if (movies[i].getCategory().equals("horror")) {
+                        System.out.println(movies[i].getName() + " -- " + movies[i].getCategory());
+                    }
+                }
+                allMovies();
                 break;
             case 5:
                 System.out.println("To infinity, and beyond... to Sci-Fi!");
+                for (int i = 0; i < movies.length; i++) {
+                    if (movies[i].getCategory().equals("scifi")) {
+                        System.out.println(movies[i].getName() + " -- " + movies[i].getCategory());
+                    }
+                }
+                allMovies();
+                break;
+            case 6:
+                System.out.println("Comedy, ha... okay.");
+                for (int i = 0; i < movies.length; i++) {
+                    if (movies[i].getCategory().equals("comedy")) {
+                        System.out.println(movies[i].getName() + " -- " + movies[i].getCategory());
+                    }
+                }
+                allMovies();
                 break;
         }
     }
