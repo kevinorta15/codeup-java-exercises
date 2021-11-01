@@ -4,10 +4,10 @@ import java.util.Scanner;
 
 public class Input {
 
-    private Scanner thisScanner = new Scanner(System.in);
-//    public Input() {
-//
-//    }
+    private Scanner thisScanner;
+    public Input() {
+        this.thisScanner = new Scanner(System.in);
+    }
 
     String getString() {
         return thisScanner.next();
@@ -22,7 +22,7 @@ public class Input {
         }
     }
 
-  int getInt(int min, int max) {
+   public int getInt(int min, int max) {
         System.out.println("Please enter a number between " + min + " and " + max);
         int input = thisScanner.nextInt();
         if (input < min || input > max) {
@@ -34,14 +34,20 @@ public class Input {
             return input;
         }
     }
+
+    public int getInt(){
+        return thisScanner.nextInt();
+    }
+
+    double getDouble(){
+        return thisScanner.nextDouble();
+    }
+
+    double getDouble(double min, double max){
+        return thisScanner.nextDouble();
+    }
 }
-//    int getInt(){
-//        return getInt();
-//    }
-//    double getDouble(double min, double max){
-//        return thisScanner.nextDouble();
-//    }
-//    double getDouble(){
-//        return thisScanner.nextDouble();
-//    }
+
+
+
 //}

@@ -23,9 +23,9 @@ public class MoviesApplication {
     }
 
     public static void allMovies() {
-        Scanner sc = new Scanner(System.in);
+        Input movieScanner = new Input();
         System.out.println("Enter your choice: ");
-        int userInput = sc.nextInt();
+        int userInput = movieScanner.getInt();
 
         switch (userInput) {
             case 0:
