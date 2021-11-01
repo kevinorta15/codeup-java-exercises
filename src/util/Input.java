@@ -4,17 +4,17 @@ import java.util.Scanner;
 
 public class Input {
 
-    private Scanner scanner;
+    private Scanner thisScanner;
 
     public Input(){
-        this.scanner = new Scanner(System.in);
+        this.thisScanner = new Scanner(System.in);
     }
 
     String getString(){
-        return scanner.next();
+        return thisScanner.next();
     }
     boolean yesNo(){
-        String userInput = scanner.next();
+        String userInput = thisScanner.next();
         if (userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes")) {
             return true;
         } else {
@@ -22,15 +22,24 @@ public class Input {
         }
     }
     int getInt(int min, int max){
-        return scanner.nextInt();
+        System.out.println("Please enter a number between " + min + " and " + max);
+        int input = thisScanner.nextInt();
+        if (input < min ||  input > max ){
+            //sout message for entering wrong
+            System.out.println("Sorry! You have not entered the correct numbers. Try again....");
+            return getInt(min, max);
+        } else {
+            System.out.println("That's a great number!");
+            return input;
+        }
     }
     int getInt(){
-        return scanner.nextInt();
+        return getInt(5,10);
     }
     double getDouble(double min, double max){
-        return scanner.nextDouble();
+        return thisScanner.nextDouble();
     }
     double getDouble(){
-        return scanner.nextDouble();
+        return thisScanner.nextDouble();
     }
 }
