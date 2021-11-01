@@ -39,11 +39,11 @@ public class Input {
         return thisScanner.nextInt();
     }
 
-    double getDouble(){
+    public double getDouble(){
         return thisScanner.nextDouble();
     }
 
-    double getDouble(double min, double max){
+    public double getDouble(double min, double max){
         return thisScanner.nextDouble();
     }
 }
