@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Person {
     //A class: This is the template or a blueprint for a 'PERSON'
 
-    //instance variables
+//    instance variables
 //    public String firstName;
 //    public String lastName;
 //    public int age;
@@ -45,22 +45,30 @@ public class Person {
 
         //Exercise Below:
 
-        Person kevin = new Person("Kevin Orta");
-        System.out.println(kevin.getName());
-        kevin.sayHello();
-        kevin.setName("Albert");
-        kevin.sayHello();
-        kevin.setName("Kevin Orta");
-        kevin.sayHello();
+//        Person kevin = new Person("Kevin Orta");
+//        System.out.println(kevin.getName());
+//        kevin.sayHello();
+//        kevin.setName("Albert");
+//        kevin.sayHello();
+//        kevin.setName("Kevin Orta");
+//        kevin.sayHello();
     }
 
     //Exercise Time:
 
     //private field is considered property
     private String name;
+    protected int age;
+
+    public Person(){};
 
     public Person(String name){
         this.name = name;
+    }
+
+    public Person(String name, int age){
+        this.name = name;
+        this.age = age;
     }
 
     public String getName(){
