@@ -9,11 +9,11 @@ public class Input {
         this.thisScanner = new Scanner(System.in);
     }
 
-    String getString() {
+    public String getString() {
         return thisScanner.next();
     }
 
-    boolean yesNo() {
+    public boolean yesNo() {
         String userInput = thisScanner.next();
         if (userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes")) {
             return true;

@@ -6,15 +6,15 @@ public class Student {
     private String name;
     private  ArrayList<Integer> grades;
 
-    public Student(String name, ArrayList<Integer> grades){
+    public Student(String name){
         this.name = name;
-        this.grades = grades;
+        this.grades = new ArrayList<>();
     }
 
-    public void setName(String name, ArrayList<Integer> grades){
-        this.name = name;
-        this.grades = grades;
-    }
+//    public void setName(String name, ArrayList<Integer> grades){
+//        this.name = name;
+//        this.grades = grades;
+//    }
 
     public String getName(){
         return this.name;
@@ -38,8 +38,8 @@ public class Student {
     public static void main(String[] args) {
         ArrayList<Integer> grades = new ArrayList<>();
         ArrayList<Integer> student1grades = new ArrayList<>();
-        Student kevin = new Student("Kevin", grades);
-        Student kayla = new Student("Kayla", student1grades);
+        Student kevin = new Student("Kevin");
+        Student kayla = new Student("Kayla");
         kevin.addGrade(97);
         kevin.addGrade(100);
         kayla.addGrade(80);
