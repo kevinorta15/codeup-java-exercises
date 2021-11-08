@@ -36,11 +36,22 @@ public class Input {
     }
 
     public int getInt(){
-        return thisScanner.nextInt();
+        try {
+            String s = getString();
+            return Integer.valueOf(s);
+        } catch (NumberFormatException e){
+            System.out.println("Sorry, that was not a number");
+        }
     }
 
     public double getDouble(){
-        return thisScanner.nextDouble();
+        try {
+            String s = getString();
+            return Double.valueOf(s);
+        } catch (NumberFormatException e){
+            System.out.println("Sorry, that was not a number");
+            e.printStackTrace();
+        }
     }
 
     public double getDouble(double min, double max){
