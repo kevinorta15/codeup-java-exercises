@@ -40,7 +40,7 @@ public class Input {
             String s = getString();
             return Integer.valueOf(s);
         } catch (NumberFormatException e){
-            System.out.println("Sorry, that was not a number");
+            throw new NumberFormatException("Sorry, that was not a number");
         }
     }
 
@@ -49,8 +49,7 @@ public class Input {
             String s = getString();
             return Double.valueOf(s);
         } catch (NumberFormatException e){
-            System.out.println("Sorry, that was not a number");
-            e.printStackTrace();
+            throw new NumberFormatException("Sorry, that was not a number");
         }
     }
 

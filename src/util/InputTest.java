@@ -33,6 +33,8 @@ public class InputTest {
 //        System.out.println("the decimal number you picked is: " + userDou);
 
         System.out.println("Please enter a number:");
-        input.getInt();
+        int userInput = input.getInt();
+        System.out.println("userInput = " + userInput);
+
     }
 }
