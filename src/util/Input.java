@@ -10,7 +10,7 @@ public class Input {
     }
 
     public String getString() {
-        return thisScanner.next();
+        return thisScanner.nextLine();
     }
 
     public boolean yesNo() {
@@ -40,7 +40,9 @@ public class Input {
             String s = getString();
             return Integer.valueOf(s);
         } catch (NumberFormatException e){
-            throw new NumberFormatException("Sorry, that was not a number");
+//            throw new NumberFormatException("Sorry, that was not a number");
+            System.out.println("That was not a number");
+            return getInt();
         }
     }
 
@@ -49,7 +51,8 @@ public class Input {
             String s = getString();
             return Double.valueOf(s);
         } catch (NumberFormatException e){
-            throw new NumberFormatException("Sorry, that was not a number");
+            System.out.println("Sorry, that was not a number");
+            return getDouble();
         }
     }
 
