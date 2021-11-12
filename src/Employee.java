@@ -1,3 +1,6 @@
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class Employee extends Person {
 
     public Employee(String employeeName) {
@@ -28,6 +31,7 @@ public class Employee extends Person {
         System.out.println("Kev.getName() = " + Kev.getName());
         //using doWork with Employee Kev
         Kev.doWork();
+
         //use doWork with Person, does not work, not in Person
 //        unemployedKev.doWork();
     }

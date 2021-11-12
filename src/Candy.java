@@ -9,6 +9,7 @@ public class Candy {
     //YOUR MAIN
     public static void main(String[] args) {
 
+
         Candy snickers = new Candy("Snickers", "Large", new String[] {"chocolate", "caramel", "chewy"});
         Candy twix = new Candy("Twix", "Medium", new String[]{"caramel", "long", "crunchy"});
         Candy skittles = new Candy("Skittles", "Small",new String[]{"colorful", "Sweet", "bite-sized"});
